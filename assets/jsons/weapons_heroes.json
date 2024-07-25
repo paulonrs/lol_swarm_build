@@ -1,0 +1,112 @@
+{
+  "weapons_heroes": [
+    {
+      "hero": "Jinx",
+      "name": "Meow Meow",
+      "function": "Jinx shoots bullets in a target direction.",
+      "scalesWith": [
+        "Damage",
+        "Ability Haste",
+        "Critical Chance",
+        "Projectile Count"
+      ],
+      "evolution": "Ability Haste"
+    },
+    {
+      "hero": "Seraphine",
+      "name": "Sound Wave",
+      "function": "Seraphine sends out a wave, damaging and slowing enemies hit.",
+      "scalesWith": [
+        "Damage",
+        "Ability Haste",
+        "Critical Chance",
+        "Projectile Count",
+        "Duration"
+      ],
+      "evolution": "Projectile Count"
+    },
+    {
+      "hero": "Leona",
+      "name": "Shield Slam",
+      "function": "Leona slams her shield, dealing damage in a cone.",
+      "scalesWith": [
+        "Damage",
+        "Ability Haste",
+        "Area Size",
+        "Critical Chance",
+        "Armor"
+      ],
+      "evolution": "Armor"
+    },
+    {
+      "hero": "Illaoi",
+      "name": "Tentacle Slam",
+      "function": "Illaoi slams the ground, dealing damage and spawning a tentacle that will attack nearby enemies.",
+      "scalesWith": ["Damage", "Ability Haste", "Area Size", "Duration"],
+      "evolution": "Duration"
+    },
+    {
+      "hero": "Briar",
+      "name": "Pillory Swipe",
+      "function": "Briar sweeps in front of her, dealing damage.",
+      "scalesWith": [
+        "Damage",
+        "Ability Haste",
+        "Area Size",
+        "Critical Chance",
+        "Max Health"
+      ],
+      "evolution": "Max Health"
+    },
+    {
+      "hero": "Yasuo",
+      "name": "Steel Tempest",
+      "function": "Yasuo gains flow, which increases as he moves and dashes. At 100 flow stacks, he throws out a whirlwind.",
+      "scalesWith": [
+        "Damage",
+        "Ability Haste",
+        "Critical Chance",
+        "Projectile Count"
+      ],
+      "evolution": "Critical Chance"
+    },
+    {
+      "hero": "Riven",
+      "name": "Bunny Hop",
+      "function": "Riven passively gains movement speed and a charge as she moves. At maximum charge, she jumps forward. Every second cast knocks up enemies.",
+      "scalesWith": [
+        "Damage",
+        "Area Size",
+        "Critical Chance",
+        "Movement Speed"
+      ],
+      "evolution": " Movement Speed."
+    },
+    {
+      "hero": "Aurora",
+      "name": "Guiding Hex",
+      "function": "Aurora shoots a hex through the air, guiding it as it flies. Enemies take damage and are hexed. She purges hexed targets every 3rd cast of her spell, which deals extra damage.",
+      "scalesWith": [
+        "Damage",
+        "Ability Haste",
+        "Critical Chance",
+        "Projectile Count",
+        "Experience"
+      ],
+      "evolution": "Experience"
+    },
+    {
+      "hero": "Xayah",
+      "name": "Winged Dagger",
+      "function": "Xayah throws out a dagger in front of her that pierces through enemies. It eventually leaves a dagger on the ground.",
+      "scalesWith": [
+        "Damage",
+        "Ability Haste",
+        "Critical Chance",
+        "Projectile Count",
+        "Duration"
+      ],
+      "evolution": "Pickup Radius"
+    }
+  ]
+}

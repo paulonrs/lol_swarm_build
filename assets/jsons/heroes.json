@@ -1,0 +1,49 @@
+{
+  "heroes": [
+    {
+      "name": "Xayah",
+      "imageUrl": "xayah.png",
+      "primaryWeapon": "Echoing Batblades"
+    },
+    {
+      "name": "Jinx",
+      "imageUrl": "jinx.png",
+      "primaryWeapon": "Meow Meow"
+    },
+    {
+      "name": "Seraphine",
+      "imageUrl": "seraphine.png",
+      "primaryWeapon": "Sound Wave"
+    },
+    {
+      "name": "Leona",
+      "imageUrl": "leona.png",
+      "primaryWeapon": "Shield Slam"
+    },
+    {
+      "name": "Illaoi",
+      "imageUrl": "illaoi.png",
+      "primaryWeapon": "Tentacle Slam"
+    },
+    {
+      "name": "Aurora",
+      "imageUrl": "aurora.png",
+      "primaryWeapon": "Guiding Hex"
+    },
+    {
+      "name": "Briar",
+      "imageUrl": "briar.png",
+      "primaryWeapon": "Pillory Swipe"
+    },
+    {
+      "name": "Yasuo",
+      "imageUrl": "yasuo.png",
+      "primaryWeapon": "Steel Tempest"
+    },
+    {
+      "name": "Riven",
+      "imageUrl": "riven.png",
+      "primaryWeapon": "Bunny Hop"
+    }
+  ]
+}
