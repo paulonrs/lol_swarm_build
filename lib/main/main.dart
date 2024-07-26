@@ -40,8 +40,8 @@ class MyApp extends StatelessWidget {
           transition: Transition.fade,
         ),
         GetPage(
-          name: AppRoutes.pageName(AppPages.tela3),
-          page: makeTela3Page,
+          name: AppRoutes.pageName(AppPages.selectHero),
+          page: makeSelectHeroPage,
           transition: Transition.fade,
         ),
       ],

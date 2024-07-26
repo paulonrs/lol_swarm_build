@@ -3,12 +3,13 @@ import 'package:lol_swarm/domain/entities/hero_entity.dart';
 import 'package:lol_swarm/domain/usecase/load_heroes.dart';
 
 import '../../infra/appRoutes/app_pages.dart';
-import '../../ui/tela3/tela3_presenter.dart';
+import '../../ui/select_hero/select_hero_presenter.dart';
 
-class GetxTela3Presenter extends GetxController implements Tela3Presenter {
+class GetxSelectHeroPresenter extends GetxController
+    implements SelectHeroPresenter {
   final LoadHeroes loadHeroes;
 
-  GetxTela3Presenter({required this.loadHeroes});
+  GetxSelectHeroPresenter({required this.loadHeroes});
 
   @override
   void goToTela2Page() {

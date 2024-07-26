@@ -11,8 +11,8 @@ class GetxTela2Presenter extends GetxController implements Tela2Presenter {
   }
 
   @override
-  void goToTela3Page() {
-    Get.toNamed(AppRoutes.pageName(AppPages.tela3));
+  void goToSelectHeroPage() {
+    Get.toNamed(AppRoutes.pageName(AppPages.selectHero));
   }
 
   BuildEntity getBuild() {

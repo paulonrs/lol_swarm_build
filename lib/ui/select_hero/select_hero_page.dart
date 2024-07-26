@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import '../../domain/entities/entities.dart';
 import '../components/components.dart';
-import 'tela3_presenter.dart';
+import 'select_hero_presenter.dart';
 
-class Tela3Page extends StatelessWidget {
-  final Tela3Presenter presenter;
-  const Tela3Page({super.key, required this.presenter});
+class SelectHeroPage extends StatelessWidget {
+  final SelectHeroPresenter presenter;
+  const SelectHeroPage({super.key, required this.presenter});
 
   Future<List<HeroEntity>> fetchHeroes() async {
     return await presenter.getHeroes();

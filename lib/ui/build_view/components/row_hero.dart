@@ -23,7 +23,7 @@ class RowHeroState extends State<RowHero> {
   }
 
   Future<HeroEntity?> handleHeroTap(HeroEntity? tappedHero) async {
-    final result = await Get.toNamed(AppRoutes.pageName(AppPages.tela3),
+    final result = await Get.toNamed(AppRoutes.pageName(AppPages.selectHero),
         arguments: tappedHero);
     if (result != null && result is HeroEntity) {
       setState(() {

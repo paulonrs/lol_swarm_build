@@ -20,7 +20,7 @@ class Tela2Page extends StatelessWidget {
                     create: (_) => presenter,
                     child: const Column(
                       children: [
-                        InputGoTela3(),
+                        InputGoSelectHero(),
                       ],
                     )),
                 ElevatedButton(
