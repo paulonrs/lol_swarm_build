@@ -6,8 +6,8 @@ import '../../domain/entities/entities.dart';
 
 class GetxTela2Presenter extends GetxController implements Tela2Presenter {
   @override
-  void goToTela1Page() {
-    Get.toNamed(AppRoutes.pageName(AppPages.tela1), arguments: getBuild());
+  void goToBuildViewPage() {
+    Get.toNamed(AppRoutes.pageName(AppPages.buildView), arguments: getBuild());
   }
 
   @override

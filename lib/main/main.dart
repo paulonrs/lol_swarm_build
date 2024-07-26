@@ -27,11 +27,11 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       navigatorObservers: [routeObserver],
-      initialRoute: AppRoutes.pageName(AppPages.tela1),
+      initialRoute: AppRoutes.pageName(AppPages.buildView),
       getPages: [
         GetPage(
-          name: AppRoutes.pageName(AppPages.tela1),
-          page: makeTela1Page,
+          name: AppRoutes.pageName(AppPages.buildView),
+          page: makeBuildViewPage,
           transition: Transition.fade,
         ),
         GetPage(

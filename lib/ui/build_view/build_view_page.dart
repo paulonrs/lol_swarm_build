@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:lol_swarm/ui/tela1/tela1.dart';
+import 'package:lol_swarm/ui/build_view/build_view.dart';
 
 import '../../domain/entities/entities.dart';
 import 'components/components.dart';
 
-class Tela1Page extends StatelessWidget {
-  final Tela1Presenter presenter;
-  const Tela1Page({super.key, required this.presenter});
+class BuildViewPage extends StatelessWidget {
+  final BuildViewPresenter presenter;
+  const BuildViewPage({super.key, required this.presenter});
 
   @override
   Widget build(BuildContext context) {

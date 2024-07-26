@@ -33,9 +33,8 @@ class HeroIcon extends StatelessWidget {
                 height: 100.0,
                 color: const Color.fromARGB(15, 33, 33, 33),
                 child: Image(
-                  image: AssetImage(hero != null
-                      ? urlImgFolder + hero!.imageUrl
-                      : selectIcon),
+                  image: AssetImage(
+                      hero != null ? urlImgFolder + hero.imageUrl : selectIcon),
                 ),
               ),
             ),

@@ -24,7 +24,7 @@ class Tela2Page extends StatelessWidget {
                       ],
                     )),
                 ElevatedButton(
-                  onPressed: presenter.goToTela1Page,
+                  onPressed: presenter.goToBuildViewPage,
                   child: const Text('Voltar para Tela 1'),
                 ),
               ],
