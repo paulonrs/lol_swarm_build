@@ -10,7 +10,9 @@ class WeaponIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String urlImg = weapon?.imageUrl ?? 'assets/images/icons/select_area.png';
+    String urlImg = weapon != null
+        ? 'assets/images/weapons/${weapon!.imageUrl}'
+        : 'assets/images/icons/select_area.png';
     return Padding(
       padding: const EdgeInsets.only(top: 8, left: 8, right: 8),
       child: Column(

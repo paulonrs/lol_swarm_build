@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:flutter/material.dart';
 
 class HeroEntity extends Equatable {
   final String name;
@@ -50,7 +51,16 @@ enum Passive {
   maxHealth,
   moveSpeed,
   pickupRadius,
-  projectileCount,
+  duration,
+  projectileCount;
+
+  static Passive? fromString(String value) {
+    debugPrint('value: $value');
+    return Passive.values.firstWhere(
+      (e) => e.toString().split('.').last == value,
+      orElse: () => throw Exception('Passive not found'),
+    );
+  }
 }
 
 class SkillEntity {

@@ -1,38 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import '../../../domain/entities/entities.dart';
-import '../../../infra/appRoutes/app_routes.dart';
 
-class HeroIcon extends StatefulWidget {
+class HeroIcon extends StatelessWidget {
   final HeroEntity? hero;
-  const HeroIcon({super.key, this.hero});
+  final Future<HeroEntity?> Function(HeroEntity?) onTapFunction;
 
-  @override
-  HeroIconState createState() => HeroIconState();
-}
-
-class HeroIconState extends State<HeroIcon> {
-  late HeroEntity? newHero;
-  final String selectIcon = 'assets/images/icons/select_area.png';
-  final String urlImg = "assets/images/heroes/";
-
-  @override
-  void initState() {
-    super.initState();
-    newHero = widget.hero;
-  }
+  const HeroIcon({super.key, this.hero, required this.onTapFunction});
 
   @override
   Widget build(BuildContext context) {
+    HeroEntity? hero = this.hero;
+    const String selectIcon = 'assets/images/icons/select_area.png';
+    const String urlImgFolder = "assets/images/heroes/";
+
     return GestureDetector(
       onTap: () async {
-        final result = await Get.toNamed(AppRoutes.pageName(AppPages.tela3),
-            arguments: newHero);
+        final result = await onTapFunction(hero);
         if (result != null) {
-          setState(() {
-            newHero = result;
-          });
+          hero = result;
         }
       },
       child: Padding(
@@ -47,15 +33,15 @@ class HeroIconState extends State<HeroIcon> {
                 height: 100.0,
                 color: const Color.fromARGB(15, 33, 33, 33),
                 child: Image(
-                  image: AssetImage(newHero != null
-                      ? urlImg + newHero!.imageUrl
+                  image: AssetImage(hero != null
+                      ? urlImgFolder + hero!.imageUrl
                       : selectIcon),
                 ),
               ),
             ),
             const SizedBox(height: 8.0),
             Text(
-              newHero?.name ?? 'Select',
+              hero?.name ?? 'Select',
               style: const TextStyle(fontSize: 16.0),
             ),
           ],

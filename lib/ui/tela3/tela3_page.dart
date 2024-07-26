@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import '../../domain/entities/entities.dart';
+import '../components/components.dart';
 import 'tela3_presenter.dart';
 
 class Tela3Page extends StatelessWidget {
@@ -30,35 +30,20 @@ class Tela3Page extends StatelessWidget {
           appBar: AppBar(title: const Text('Tela 3')),
           body: GridView.builder(
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 3,
-              crossAxisSpacing: 8.0,
-              mainAxisSpacing: 8.0,
+              crossAxisCount: 2,
+              crossAxisSpacing: 0.0,
+              mainAxisSpacing: 0.0,
+              childAspectRatio: 1.3,
             ),
             itemCount: heroes.length,
             itemBuilder: (context, index) {
               final hero = heroes[index];
-              return GestureDetector(
-                onTap: () {
-                  Navigator.pop(context, hero);
-                },
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    Expanded(
-                      child: Image.network(
-                        hero.imageUrl,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    const SizedBox(height: 8.0),
-                    Text(
-                      hero.name,
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(fontSize: 18.0),
-                    ),
-                  ],
-                ),
-              );
+              return HeroIcon(
+                  hero: hero,
+                  onTapFunction: (hero) async {
+                    Navigator.pop(context, hero);
+                    return null;
+                  });
             },
           ),
         );
