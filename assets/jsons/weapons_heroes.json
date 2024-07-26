@@ -2,111 +2,115 @@
   "weapons_heroes": [
     {
       "hero": "Jinx",
+      "imageUrl": "jinx_weapon.png",
       "name": "Meow Meow",
       "function": "Jinx shoots bullets in a target direction.",
       "scalesWith": [
-        "Damage",
-        "Ability Haste",
-        "Critical Chance",
-        "Projectile Count"
+        "damage",
+        "abilityHaste",
+        "criticalChance",
+        "projectileCount"
       ],
-      "evolution": "Ability Haste"
+      "evolution": "abilityHaste"
     },
     {
       "hero": "Seraphine",
+      "imageUrl": "seraphine_weapon.png",
       "name": "Sound Wave",
       "function": "Seraphine sends out a wave, damaging and slowing enemies hit.",
       "scalesWith": [
-        "Damage",
-        "Ability Haste",
-        "Critical Chance",
-        "Projectile Count",
-        "Duration"
+        "damage",
+        "abilityHaste",
+        "criticalChance",
+        "projectileCount",
+        "duration"
       ],
-      "evolution": "Projectile Count"
+      "evolution": "projectileCount"
     },
     {
       "hero": "Leona",
+      "imageUrl": "leona_weapon.png",
       "name": "Shield Slam",
       "function": "Leona slams her shield, dealing damage in a cone.",
       "scalesWith": [
-        "Damage",
-        "Ability Haste",
-        "Area Size",
-        "Critical Chance",
-        "Armor"
+        "damage",
+        "abilityHaste",
+        "areaSize",
+        "criticalChance",
+        "armor"
       ],
-      "evolution": "Armor"
+      "evolution": "armor"
     },
     {
       "hero": "Illaoi",
+      "imageUrl": "illaoi_weapon.png",
       "name": "Tentacle Slam",
       "function": "Illaoi slams the ground, dealing damage and spawning a tentacle that will attack nearby enemies.",
-      "scalesWith": ["Damage", "Ability Haste", "Area Size", "Duration"],
-      "evolution": "Duration"
+      "scalesWith": ["damage", "abilityHaste", "areaSize", "duration"],
+      "evolution": "duration"
     },
     {
       "hero": "Briar",
+      "imageUrl": "briar_weapon.png",
       "name": "Pillory Swipe",
       "function": "Briar sweeps in front of her, dealing damage.",
       "scalesWith": [
-        "Damage",
-        "Ability Haste",
-        "Area Size",
-        "Critical Chance",
-        "Max Health"
+        "damage",
+        "abilityHaste",
+        "areaSize",
+        "criticalChance",
+        "maxHealth"
       ],
-      "evolution": "Max Health"
+      "evolution": "maxHealth"
     },
     {
       "hero": "Yasuo",
+      "imageUrl": "yasuo_weapon.png",
       "name": "Steel Tempest",
       "function": "Yasuo gains flow, which increases as he moves and dashes. At 100 flow stacks, he throws out a whirlwind.",
       "scalesWith": [
-        "Damage",
-        "Ability Haste",
-        "Critical Chance",
-        "Projectile Count"
+        "damage",
+        "abilityHaste",
+        "criticalChance",
+        "projectileCount"
       ],
-      "evolution": "Critical Chance"
+      "evolution": "criticalChance"
     },
     {
       "hero": "Riven",
+      "imageUrl": "riven_weapon.png",
       "name": "Bunny Hop",
       "function": "Riven passively gains movement speed and a charge as she moves. At maximum charge, she jumps forward. Every second cast knocks up enemies.",
-      "scalesWith": [
-        "Damage",
-        "Area Size",
-        "Critical Chance",
-        "Movement Speed"
-      ],
-      "evolution": " Movement Speed."
+      "scalesWith": ["damage", "areaSize", "criticalChance", "moveSpeed"],
+      "evolution": "moveSpeed"
     },
     {
       "hero": "Aurora",
+      "imageUrl": "aurora_weapon.png",
       "name": "Guiding Hex",
       "function": "Aurora shoots a hex through the air, guiding it as it flies. Enemies take damage and are hexed. She purges hexed targets every 3rd cast of her spell, which deals extra damage.",
       "scalesWith": [
-        "Damage",
-        "Ability Haste",
-        "Critical Chance",
-        "Projectile Count",
-        "Experience"
+        "damage",
+        "abilityHaste",
+        "criticalChance",
+        "projectileCount",
+        "exp"
       ],
-      "evolution": "Experience"
+      "evolution": "exp"
     },
     {
       "hero": "Xayah",
+      "imageUrl": "xayah_weapon.png",
       "name": "Winged Dagger",
       "function": "Xayah throws out a dagger in front of her that pierces through enemies. It eventually leaves a dagger on the ground.",
       "scalesWith": [
-        "Damage",
-        "Ability Haste",
-        "Critical Chance",
-        "Projectile Count",
-        "Duration"
+        "damage",
+        "abilityHaste",
+        "criticalChance",
+        "projectileCount",
+        "duration"
       ],
-      "evolution": "Pickup Radius"
+      "evolution": "pickupRadius"
     }
   ]
 }
