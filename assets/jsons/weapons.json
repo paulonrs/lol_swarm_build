@@ -1,0 +1,173 @@
+{
+  "weapons": [
+    {
+      "name": "Ani-Mines",
+      "function": "Drops timed explosive projectiles in a ring that explode for large area damage.",
+      "scalesWith": ["damage", "abilityHaste", "areaSize", "projectileCount"],
+      "evolution": "areaSize"
+    },
+    {
+      "name": "Anti-Shark Sea Mine",
+      "function": "Fires explosives that bounce between enemies.",
+      "scalesWith": ["damage", "abilityHaste", "areaSize"],
+      "evolution": "damage"
+    },
+    {
+      "name": "Battle Bunny Crossbow",
+      "function": "Fires a cone of projectiles scaling with bonus crit chance in a random direction. Projectiles pierce on critical strike.",
+      "scalesWith": [
+        "damage",
+        "abilityHaste",
+        "criticalChance",
+        "projectileCount"
+      ],
+      "evolution": "criticalChance"
+    },
+    {
+      "name": "Blade-o-rang",
+      "function": "Fires returning projectiles at the nearest enemy.",
+      "scalesWith": [
+        "damage",
+        "abilityHaste",
+        "criticalChance",
+        "projectileCount"
+      ],
+      "evolution": "moveSpeed"
+    },
+    {
+      "name": "Bunny Mega-Blast",
+      "function": "Fires orbital strikes scaling with bonus critical chance at random enemies.",
+      "scalesWith": ["damage", "abilityHaste", "areaSize", "criticalChance"],
+      "evolution": "criticalChance"
+    },
+    {
+      "name": "Cyclonic Slicers",
+      "function": "Orbiting projectiles damage and knock back enemies.",
+      "scalesWith": [
+        "damage",
+        "abilityHaste",
+        "areaSize",
+        "projectileCount",
+        "duration"
+      ],
+      "evolution": "healthRegen"
+    },
+    {
+      "name": "Echoing Batblades",
+      "function": "Fires piercing projectiles that bounce off terrain.",
+      "scalesWith": [
+        "damage",
+        "abilityHaste",
+        "criticalChance",
+        "projectileCount"
+      ],
+      "evolution": "projectileCount"
+    },
+    {
+      "name": "Final City Transit",
+      "function": "Trains occasionally appear and drive through enemies.",
+      "scalesWith": ["damage", "abilityHaste", "criticalChance", "armor"],
+      "evolution": "damage"
+    },
+    {
+      "name": "Gatling Bunny-Guns",
+      "function": "Deals area damage over time in a cone.",
+      "scalesWith": ["damage", "abilityHaste", "duration"],
+      "evolution": "duration"
+    },
+    {
+      "name": "Iceblast Armor",
+      "function": "Blocks damage and freezes surrounding enemies. damage scales with armor and maxHealth.",
+      "scalesWith": ["damage", "abilityHaste", "areaSize", "duration", "armor"],
+      "evolution": "armor"
+    },
+    {
+      "name": "Lioness's Lament",
+      "function": "Fires crescent shaped projectiles.",
+      "scalesWith": [
+        "damage",
+        "abilityHaste",
+        "criticalChance",
+        "projectileCount"
+      ],
+      "evolution": "abilityHaste"
+    },
+    {
+      "name": "Paw Print Poisoner",
+      "function": "Leaves a damaging poison cloud behind while moving.",
+      "scalesWith": ["damage", "areaSize", "duration", "moveSpeed"],
+      "evolution": "moveSpeed"
+    },
+    {
+      "name": "Radiant Field",
+      "function": "Damages nearby enemies, scaling with your maxHealth.",
+      "scalesWith": ["damage", "areaSize", "maxHealth"],
+      "evolution": "maxHealth"
+    },
+    {
+      "name": "Searing Shortbow",
+      "function": "Fires projectiles that create lingering fire areas for a duration.",
+      "scalesWith": [
+        "damage",
+        "abilityHaste",
+        "areaSize",
+        "projectileCount",
+        "duration"
+      ],
+      "evolution": "areaSize"
+    },
+    {
+      "name": "Statikk Sword",
+      "function": "Fires a lightning shock that bounces between enemies with the highest absolute current health.",
+      "scalesWith": [
+        "damage",
+        "abilityHaste",
+        "areaSize",
+        "criticalChance",
+        "duration"
+      ],
+      "evolution": "maxHealth"
+    },
+    {
+      "name": "T.I.B.B.E.R.S",
+      "function": "Summons Robo-Tibbers. Robo-Tibbers swipes, dealing area damage. Robo-Tibbers focuses on enemies with the highest absolute current health.",
+      "scalesWith": ["damage", "abilityHaste", "duration", "moveSpeed"],
+      "evolution": "duration"
+    },
+    {
+      "name": "The Annihilator",
+      "function": "Summons a massive strike over the area after a delay which instantly kills all normal enemies and heavily damages Elite enemies.",
+      "scalesWith": ["damage", "abilityHaste", "areaSize"],
+      "evolution": "exp"
+    },
+    {
+      "name": "UwU Blaster",
+      "function": "Rapidly fires laser projectiles at the nearest enemy.",
+      "scalesWith": [
+        "damage",
+        "abilityHaste",
+        "criticalChance",
+        "projectileCount"
+      ],
+      "evolution": "abilityHaste"
+    },
+    {
+      "name": "Vortex Glove",
+      "function": "Fires a rotating stream of projectiles.",
+      "scalesWith": ["damage", "criticalChance", "projectileCount"],
+      "evolution": "healthRegen"
+    },
+    {
+      "name": "YuumiBot",
+      "function": "Summons a Yuum.AI drone. Yuum.AI damages and knocks up enemies, and also gathers exp Orbs.",
+      "scalesWith": [
+        "damage",
+        "abilityHaste",
+        "areaSize",
+        "duration",
+        "pickupRadius"
+      ],
+      "evolution": "pickupRadius"
+    }
+  ]
+}

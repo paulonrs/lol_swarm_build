@@ -4,6 +4,7 @@ import 'package:lol_swarm/domain/entities/hero_entity.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
 import '../../../domain/usecase/usecase.dart';
+import '../../data.dart';
 
 class LoadHeroesJson implements LoadHeroes {
   @override
@@ -47,56 +48,5 @@ class LoadHeroesJson implements LoadHeroes {
               ultimate: null,
             ))
         .toList();
-  }
-}
-
-class HeroJsonItem {
-  final String name;
-  final String imageUrl;
-  final String primaryWeapon;
-
-  HeroJsonItem(
-      {required this.name,
-      required this.imageUrl,
-      required this.primaryWeapon});
-
-  factory HeroJsonItem.fromJson(Map<String, dynamic> json) {
-    return HeroJsonItem(
-      name: json['name'],
-      imageUrl: json['imageUrl'],
-      primaryWeapon: json['primaryWeapon'],
-    );
-  }
-}
-
-class WeaponHeroJsonItem {
-  final String hero;
-  final String imageUrl;
-  final String name;
-  final String function;
-  final List<String> scalesWith;
-  final String evolution;
-
-  WeaponHeroJsonItem(
-      {required this.hero,
-      required this.imageUrl,
-      required this.name,
-      required this.function,
-      required this.scalesWith,
-      required this.evolution});
-
-  factory WeaponHeroJsonItem.fromJson(Map<String, dynamic> json) {
-    List<String> scalesWithList = (json['scalesWith'] as List<dynamic>)
-        .map((item) => item as String)
-        .toList();
-
-    return WeaponHeroJsonItem(
-      hero: json["hero"],
-      imageUrl: json["imageUrl"],
-      name: json["name"],
-      function: json["function"],
-      scalesWith: scalesWithList,
-      evolution: json["evolution"],
-    );
   }
 }

@@ -1,5 +1,4 @@
 import 'package:equatable/equatable.dart';
-import 'package:flutter/material.dart';
 
 class HeroEntity extends Equatable {
   final String name;
@@ -55,11 +54,41 @@ enum Passive {
   projectileCount;
 
   static Passive? fromString(String value) {
-    debugPrint('value: $value');
     return Passive.values.firstWhere(
       (e) => e.toString().split('.').last == value,
       orElse: () => throw Exception('Passive not found'),
     );
+  }
+
+  String get getName {
+    switch (this) {
+      case Passive.abilityHaste:
+        return 'Ability Haste';
+      case Passive.areaSize:
+        return 'Area Size';
+      case Passive.armor:
+        return 'Armor';
+      case Passive.criticalChance:
+        return 'Critical Chance';
+      case Passive.damage:
+        return 'Damage';
+      case Passive.exp:
+        return 'EXP';
+      case Passive.healthRegen:
+        return 'Health Regen';
+      case Passive.maxHealth:
+        return 'Max Health';
+      case Passive.moveSpeed:
+        return 'Move Speed';
+      case Passive.pickupRadius:
+        return 'Pickup Radius';
+      case Passive.duration:
+        return 'Duration';
+      case Passive.projectileCount:
+        return 'Projectile Count';
+      default:
+        return toString().split('.').last;
+    }
   }
 }
 
