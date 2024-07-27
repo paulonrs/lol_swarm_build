@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-
 import '../../../domain/entities/entities.dart';
 
-class WeaponIcon extends StatelessWidget {
+class WeaponIcon extends StatefulWidget {
   final WeaponEntity? weapon;
   final Future<WeaponEntity?> Function(WeaponEntity?) onTapFunction;
   final bool disabled;
 
-  const WeaponIcon(
-      {super.key,
-      this.weapon,
-      this.disabled = false,
-      this.onTapFunction = _defaultOnTapFunction});
+  const WeaponIcon({
+    Key? key,
+    this.weapon,
+    this.disabled = false,
+    this.onTapFunction = _defaultOnTapFunction,
+  }) : super(key: key);
 
   static Future<WeaponEntity?> _defaultOnTapFunction(
       WeaponEntity? weapon) async {
@@ -19,17 +19,36 @@ class WeaponIcon extends StatelessWidget {
   }
 
   @override
+  WeaponIconState createState() => WeaponIconState();
+}
+
+class WeaponIconState extends State<WeaponIcon> {
+  late WeaponEntity? weapon;
+
+  @override
+  void initState() {
+    super.initState();
+    weapon = widget.weapon;
+  }
+
+  @override
   Widget build(BuildContext context) {
-    WeaponEntity? weapon = this.weapon;
     String urlImg = weapon != null
-        ? 'assets/images/weapons/${weapon.imageUrl}'
+        ? 'assets/images/weapons/${weapon!.imageUrl}'
         : 'assets/images/icons/select_area.png';
+    String weaponName = weapon?.name ?? 'Select';
+    if (weaponName.length > 12) {
+      weaponName = '${weaponName.substring(0, 12)}...';
+    }
+
     return GestureDetector(
       onTap: () async {
-        if (!disabled) {
-          final result = await onTapFunction(weapon);
+        if (!widget.disabled) {
+          final result = await widget.onTapFunction(weapon);
           if (result != null) {
-            weapon = result;
+            setState(() {
+              weapon = result;
+            });
           }
         }
       },
@@ -52,8 +71,10 @@ class WeaponIcon extends StatelessWidget {
             ),
             const SizedBox(height: 8.0),
             Text(
-              weapon?.name ?? 'Select',
+              weaponName,
               style: const TextStyle(fontSize: 16.0),
+              maxLines: 1,
+              overflow: TextOverflow.clip,
             ),
           ],
         ),

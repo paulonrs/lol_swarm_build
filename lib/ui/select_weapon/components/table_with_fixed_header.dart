@@ -5,10 +5,8 @@ import 'componets.dart';
 
 class TableWithFixedHeader extends StatelessWidget {
   final List<WeaponEntity> weapons;
-  final Future<WeaponEntity?> Function(WeaponEntity?) onTapFunction;
 
-  const TableWithFixedHeader(
-      {super.key, required this.weapons, required this.onTapFunction});
+  const TableWithFixedHeader({super.key, required this.weapons});
 
   @override
   Widget build(BuildContext context) {
@@ -44,70 +42,77 @@ class TableWithFixedHeader extends StatelessWidget {
                           children: [
                             GestureDetector(
                               onTap: () async {
-                                final result = await onTapFunction(weapon);
-                                if (result != null) {
-                                  debugPrint('result: $result');
-                                }
+                                Navigator.pop(context, weapon);
                               },
-                              child: Row(
+                              child: Column(
                                 children: [
-                                  Expanded(
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image(
-                                        width: 100,
-                                        height: 100,
-                                        image: AssetImage(urlImgFolder +
-                                            weapon.imageUrl.toString()),
+                                  Text(weapon.name.toString(),
+                                      style: const TextStyle(fontSize: 20.0)),
+                                  Row(
+                                    children: [
+                                      Expanded(
+                                        child: ClipRRect(
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                          child: Image(
+                                            width: 100,
+                                            height: 100,
+                                            image: AssetImage(urlImgFolder +
+                                                weapon.imageUrl.toString()),
+                                          ),
+                                        ),
                                       ),
-                                    ),
-                                  ),
-                                  Expanded(
-                                    child: Center(
-                                      child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        children: [
-                                          ...List.generate(
-                                              (weapon.scalesWith.length / 2)
-                                                  .ceil(), (index) {
-                                            int startIndex = index * 2;
-                                            int endIndex = (index * 2 + 1) <
-                                                    weapon.scalesWith.length
-                                                ? index * 2 + 1
-                                                : startIndex;
-                                            List passivePair = weapon.scalesWith
-                                                .sublist(
-                                                    startIndex, endIndex + 1);
+                                      Expanded(
+                                        child: Center(
+                                          child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              ...List.generate(
+                                                  (weapon.scalesWith.length / 2)
+                                                      .ceil(), (index) {
+                                                int startIndex = index * 2;
+                                                int endIndex = (index * 2 + 1) <
+                                                        weapon.scalesWith.length
+                                                    ? index * 2 + 1
+                                                    : startIndex;
+                                                List passivePair =
+                                                    weapon.scalesWith.sublist(
+                                                        startIndex,
+                                                        endIndex + 1);
 
-                                            return Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children:
-                                                  passivePair.map((passive) {
-                                                return PassiveIconList(
-                                                  passive: PassiveEntity(
-                                                    name: passive!.getName,
-                                                    imageUrl:
-                                                        '${passive.getName}.png',
-                                                  ),
+                                                return Row(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  children: passivePair
+                                                      .map((passive) {
+                                                    return PassiveIconList(
+                                                      passive: PassiveEntity(
+                                                        name: passive!.getName,
+                                                        imageUrl:
+                                                            '${passive.getName}.png',
+                                                      ),
+                                                    );
+                                                  }).toList(),
                                                 );
-                                              }).toList(),
-                                            );
-                                          }),
-                                          const SizedBox(height: 8.0),
-                                        ],
+                                              }),
+                                              const SizedBox(height: 8.0),
+                                            ],
+                                          ),
+                                        ),
                                       ),
-                                    ),
+                                      Expanded(
+                                          child: Center(
+                                        child: PassiveIconList(
+                                            passive: PassiveEntity(
+                                                name:
+                                                    weapon.upgradeWith!.getName,
+                                                imageUrl:
+                                                    '${weapon.upgradeWith!.getName}.png')),
+                                      )),
+                                    ],
                                   ),
-                                  Expanded(
-                                      child: Center(
-                                    child: PassiveIconList(
-                                        passive: PassiveEntity(
-                                            name: weapon.upgradeWith!.getName,
-                                            imageUrl:
-                                                '${weapon.upgradeWith!.getName}.png')),
-                                  )),
+                                  const Divider(color: Colors.black)
                                 ],
                               ),
                             ),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lol_swarm/ui/select_weapon/components/table_with_fixed_header.dart';
 import '../../domain/entities/entities.dart';
-import 'components/componets.dart';
 import 'select_weapon_presenter.dart';
 
 class SelectWeaponPage extends StatelessWidget {
@@ -29,12 +28,7 @@ class SelectWeaponPage extends StatelessWidget {
         final List<WeaponEntity> weapons = snapshot.data!;
         return Scaffold(
             appBar: AppBar(title: const Text('Select Weapon')),
-            body: TableWithFixedHeader(
-                weapons: weapons,
-                onTapFunction: (weapon) async {
-                  Navigator.pop(context, weapon);
-                  return null;
-                }));
+            body: TableWithFixedHeader(weapons: weapons));
       },
     ));
   }
