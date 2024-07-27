@@ -1,9 +1,9 @@
 import 'package:get/get.dart';
-import 'package:lol_swarm/domain/entities/hero_entity.dart';
+import 'package:lol_swarm/domain/entities/entities.dart';
 import 'package:lol_swarm/domain/usecase/load_heroes.dart';
 
 import '../../infra/appRoutes/app_pages.dart';
-import '../../ui/select_hero/select_hero_presenter.dart';
+import '../../ui/select_hero/select_hero.dart';
 
 class GetxSelectHeroPresenter extends GetxController
     implements SelectHeroPresenter {

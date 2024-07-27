@@ -49,6 +49,11 @@ class MyApp extends StatelessWidget {
           page: makeSelectWeaponPage,
           transition: Transition.fade,
         ),
+        GetPage(
+          name: AppRoutes.pageName(AppPages.selectPassive),
+          page: makeSelectPassivePage,
+          transition: Transition.fade,
+        ),
       ],
     );
   }

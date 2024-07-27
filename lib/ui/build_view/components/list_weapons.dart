@@ -17,10 +17,19 @@ class ListWeaponsState extends State<ListWeapons> {
   late List<WeaponEntity?> weapons;
   late WeaponEntity? weapon;
 
+  late List<WeaponEntity?> mutableWeapons;
+
   @override
   void initState() {
     super.initState();
     weapons = widget.weapons;
+
+    mutableWeapons = List.from(weapons);
+    if (mutableWeapons.length < 4) {
+      for (var i = mutableWeapons.length; i < 4; i++) {
+        mutableWeapons.add(null);
+      }
+    }
   }
 
   Future<WeaponEntity?> handleWeaponTap(WeaponEntity? tappedWeapon) async {
@@ -28,6 +37,10 @@ class ListWeaponsState extends State<ListWeapons> {
         arguments: tappedWeapon);
     if (result != null && result is WeaponEntity) {
       setState(() {
+        int index = mutableWeapons.indexOf(tappedWeapon);
+        if (index != -1) {
+          mutableWeapons[index] = result;
+        }
         weapon = result;
       });
       return weapon;
@@ -37,12 +50,6 @@ class ListWeaponsState extends State<ListWeapons> {
 
   @override
   Widget build(BuildContext context) {
-    List<WeaponEntity?> mutableWeapons = List.from(weapons);
-    if (mutableWeapons.length < 4) {
-      for (var i = mutableWeapons.length; i < 4; i++) {
-        mutableWeapons.add(null);
-      }
-    }
     return Wrap(
       spacing: 8.0,
       runSpacing: 8.0,

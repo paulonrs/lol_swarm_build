@@ -43,13 +43,11 @@ class WeaponIconState extends State<WeaponIcon> {
 
     return GestureDetector(
       onTap: () async {
-        if (!widget.disabled) {
-          final result = await widget.onTapFunction(weapon);
-          if (result != null) {
-            setState(() {
-              weapon = result;
-            });
-          }
+        final result = await widget.onTapFunction(weapon);
+        if (result != null) {
+          setState(() {
+            weapon = result;
+          });
         }
       },
       child: Padding(

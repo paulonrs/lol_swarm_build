@@ -21,7 +21,9 @@ class BuildViewPage extends StatelessWidget {
           child: Column(
             children: [
               RowHero(hero: build.hero),
-              ListWeapons(weapons: build.weapons),
+              ListWeapons(
+                weapons: build.weapons,
+              ),
               ListPassives(passives: build.passives),
             ],
           ),

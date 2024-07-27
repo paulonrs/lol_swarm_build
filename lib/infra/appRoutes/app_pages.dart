@@ -1,4 +1,4 @@
-enum AppPages { buildView, tela2, selectHero, selectWeapon }
+enum AppPages { buildView, tela2, selectHero, selectWeapon, selectPassive }
 
 class AppRoutes {
   static String pageName(AppPages page) {
@@ -11,6 +11,8 @@ class AppRoutes {
         return '/selectHero';
       case AppPages.selectWeapon:
         return '/selectWeapon';
+      case AppPages.selectPassive:
+        return '/selectPassive';
       default:
         return '/buildView';
     }

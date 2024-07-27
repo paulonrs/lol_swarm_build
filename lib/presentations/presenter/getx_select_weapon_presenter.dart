@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:lol_swarm/domain/entities/hero_entity.dart';
+import 'package:lol_swarm/domain/entities/entities.dart';
 
 import '../../domain/usecase/usecase.dart';
 import '../../ui/ui.dart';
